@@ -1,0 +1,63 @@
+body {
+    padding-top: 91.2px;
+}
+
+/* MAIN */
+
+
+/* Navegador */
+.navegador {
+    height: 80px;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    filter: invert(100%);
+}
+
+.flecha-link {
+    padding: 21.25px 26px;
+    border-radius: 50%;
+}
+
+.flecha-link:hover {
+    background-color: #0dcaf0;
+}
+
+
+
+/* FOOTER */
+
+.instagram {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    background-clip: text;
+    
+}
+
+.facebook {
+    color: #1877f2;
+}
+
+.whatsapp {
+    color: #25d366;
+}
+
+.social-icon {
+    display: inline-block;
+    width:40px;
+    height: 40px;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: white;
+    line-height: 37px;
+    text-align: center;
+    font-size: 28px;
+    transition: all 0.1s ease-in ;
+}
+
+.social-icon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
