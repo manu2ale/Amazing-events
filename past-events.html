@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/Logo Amazing Events.png" type="image/png">
+    <link rel="shortcut icon" href="./assets/Logo-Amazing-Events.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg bg-dark bg-gradient px-5 py-4 fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html" title="Amazing Events">
-                <img src="./assets/Logo Amazing Events.png" alt="Amazin Events Logo" width="120">
+                <img src="./assets/Logo-Amazing-Events.png" alt="Amazin Events Logo" width="120">
             </a>
             <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,16 +30,16 @@
                     <a class="nav-link mx-3 link-info" aria-current="page" href="./index.html">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-3 link-info" href="#">UPCOMING EVENTS</a>
+                    <a class="nav-link mx-3 link-info" href="./upcoming-events.html">UPCOMING EVENTS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-3 link-light active" href="#">PAST EVENTS</a>
+                    <a class="nav-link mx-3 link-light active" href="./past-events.html">PAST EVENTS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-3 link-info" href="#">CONTACT</a>
+                    <a class="nav-link mx-3 link-info" href="./contact.html">CONTACT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-3 link-info" href="#">STATS</a>
+                    <a class="nav-link mx-3 link-info" href="./stats.html">STATS</a>
                 </li>
             </ul>
         </div>
@@ -50,45 +50,44 @@
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </a>
         <h1 class="fw-bold user-select-none">PAST EVENTS</h1>
-        <a class="flecha-link" href="#">
+        <a class="flecha-link" href="./contact.html">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </a>
     </div>
     
     <main>
-        <form class="my-3 container d-flex">
-            <div class="container">
+        <form class="my-3 pb-3 border-bottom border-danger-subtle container d-flex justify-content-around align-items-center flex-wrap">
+            <div class="d-flex flex-wrap justify-content-center">
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input border border-primary" type="checkbox" value="" id="flexCheckChecked"
+                    <input class="form-check-input border border-primary" type="checkbox" name="Category" value="Category1" id="flexCheckChecked"
                         checked>
                     <label class="form-check-label" for="flexCheckChecked">Category 1</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input border border-primary" type="checkbox" id="inlineCheckbox1"
-                        value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">Category 2</label>
+                    <input class="form-check-input border border-primary" type="checkbox" name="Category" value="Category2" id="Category2">
+                    <label class="form-check-label" for="Category2">Category 2</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input border border-primary" type="checkbox" id="inlineCheckbox1"
-                        value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">Category 3</label>
+                    <input class="form-check-input border border-primary" type="checkbox" name="Category" value="Category1" id="Category3">
+                    <label class="form-check-label" for="Category3">Category 3</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input border border-primary" type="checkbox" id="inlineCheckbox1"
-                        value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">Category 4</label>
+                    <input class="form-check-input border border-primary" type="checkbox" name="Category" value="Category4" id="Category4">
+                    <label class="form-check-label" for="Category4">Category 4</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input border border-primary" type="checkbox" id="inlineCheckbox1"
-                        value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">Category 5</label>
+                    <input class="form-check-input border border-primary" type="checkbox" name="Category5" value="Category5" id="Category5">
+                    <label class="form-check-label" for="Category5">Category 5</label>
                 </div>
             </div>
-            <input type="text" class="form-control w-50" placeholder="Search" aria-label="Recipient's search"
-                aria-describedby="basic-addon2">
-            <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
+            <div class="d-flex">
+                <input type="text" name="search" class="form-control border border-dark-subtle" placeholder="Search">
+                <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
+            </div>
         </form>
-        <div class="d-flex gap-3 flex-wrap justify-content-around align-items-center">
+
+
+        <div class="d-flex gap-3 mt-5 flex-wrap justify-content-evenly tarjetas">
             <div class="card text-center" style="width: 18rem;">
                 <img src="./assets/Cinema.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -96,7 +95,7 @@
                     <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quae quos non
                         voluptate qui incidunt aliquam ut tempore in laborum!</p>
                     <span>Price: $ 0000</span>
-                    <a href="#" class="btn btn-primary ms-5">More</a>
+                    <a href="./details.html" class="btn ms-5">More</a>
                 </div>
             </div>
             <div class="card text-center" style="width: 18rem;">
@@ -106,7 +105,7 @@
                     <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quae quos non
                         voluptate qui incidunt aliquam ut tempore in laborum!</p>
                     <span>Price: $ 0000</span>
-                    <a href="#" class="btn btn-primary ms-5">More</a>
+                    <a href="./details.html" class="btn ms-5">More</a>
                 </div>
             </div>
             <div class="card text-center" style="width: 18rem;">
@@ -116,7 +115,7 @@
                     <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quae quos non
                         voluptate qui incidunt aliquam ut tempore in laborum!</p>
                     <span>Price: $ 0000</span>
-                    <a href="#" class="btn btn-primary ms-5">More</a>
+                    <a href="./details.html" class="btn ms-5">More</a>
                 </div>
             </div>
             <div class="card text-center" style="width: 18rem;">
@@ -126,25 +125,23 @@
                     <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quae quos non
                         voluptate qui incidunt aliquam ut tempore in laborum!</p>
                     <span>Price: $ 0000</span>
-                    <a href="#" class="btn btn-primary ms-5">More</a>
+                    <a href="./details.html" class="btn ms-5">More</a>
                 </div>
             </div>
         </div>
+
     </main>
 
 
-
-
-    <footer
-        class="d-flex justify-content-between align-items-center px-5 py-4 text-white bg-dark bg-gradient user-select-none">
+    <footer class="d-flex justify-content-around align-items-center px-5 py-4 text-white bg-dark bg-gradient user-select-none">
         <div>
-            <a class="social-icon mx-3" title="Instagram">
+            <a href="#" class="social-icon mx-3" title="Instagram">
                 <i class=" bi bi-instagram instagram"></i>
             </a>
-            <a href="" class="social-icon mx-3" title="Facebook">
+            <a href="#" class="social-icon mx-3" title="Facebook">
                 <i class="bi bi-facebook facebook"></i>
             </a>
-            <a href="" class="social-icon mx-3" title="Whatsapp">
+            <a href="#" class="social-icon mx-3" title="Whatsapp">
                 <i class="bi bi-whatsapp whatsapp"></i>
             </a>
         </div>
@@ -152,6 +149,9 @@
             <h1>Cohort</h1>
         </div>
     </footer>
+
+
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

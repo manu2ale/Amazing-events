@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/Logo-Amazing-Events.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Amazing Events</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark bg-gradient px-5 py-4 fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html" title="Amazing Events">
+                <img src="./assets/Logo-Amazing-Events.png" alt="Amazin Events Logo" width="120">
+            </a>
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav text-nowrap user-select-none fw-semibold flex-nowrap nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link mx-3 link-info" aria-current="page" href="./index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-3 link-info" href="./upcoming-events.html">UPCOMING EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-3 link-info" href="./past-events.html">PAST EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-3 link-light active" href="./contact.html">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-3 link-info" href="./stats.html">STATS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="navegador bg-dark-subtle d-flex align-items-center justify-content-around">
+        <a class="flecha-link" href="./past-events.html">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <h1 class="fw-bold user-select-none">CONTACT US</h1>
+        <a class="flecha-link" href="./stats.html">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+    
+    <main>
+        <div class="d-flex justify-content-center align-items-center pt-5">
+            <form class="formulario" >
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control  border border-dark-subtle" id="name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control border border-dark-subtle" id="email">
+                </div>
+                <div class="mb-3">
+                    <label for="Message" class="form-label">Message</label>
+                    <textarea class="form-control border border-dark-subtle" id="Message" rows="3"></textarea>
+                </div>
+                <div class="mb-3  d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Submit</button>
+
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <img src="./assets/giphy.webp" alt="Magic Word">
+                            </div>
+                            <div class="modal-body">
+                              Formulario de prueba...
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Please</button>
+                              <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+    <footer class="d-flex justify-content-around align-items-center px-5 py-4 text-white bg-dark bg-gradient user-select-none">
+        <div>
+            <a href="#" class="social-icon mx-3" title="Instagram">
+                <i class=" bi bi-instagram instagram"></i>
+            </a>
+            <a href="#" class="social-icon mx-3" title="Facebook">
+                <i class="bi bi-facebook facebook"></i>
+            </a>
+            <a href="#" class="social-icon mx-3" title="Whatsapp">
+                <i class="bi bi-whatsapp whatsapp"></i>
+            </a>
+        </div>
+        <div>
+            <h1>Cohort</h1>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
