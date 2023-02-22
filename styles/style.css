@@ -25,17 +25,20 @@ main {
 }
 
 /* Cards */
+.img {
+    overflow: hidden;
+}
 .card-img-top {
     width: 100%;
     height: 12rem;
     object-fit:cover;
+    transition: all 0.2s ease;
 }
 
-.detail-img {
-    width: 350px;
-    height: 400px;
-    object-fit: cover;
+.card:hover img {
+    transform: scale(1.04);
 }
+
 
 .card a {
     background-color: #dd0269;
@@ -46,7 +49,17 @@ main {
     border-color: #dd0269;
 }
 
+/* Details */
+.img-detail {
+    width: 600px;
+    height:auto;
+    object-fit: cover;
+    overflow: hidden;
+}
 
+.card-footer span{
+    font-weight: bold;
+}
 
 /* CONTACT */
 .formulario {
@@ -90,7 +103,7 @@ main {
     /* background-color: white; */
     line-height: 37px;
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
 }
 
 .social-icon:hover {
