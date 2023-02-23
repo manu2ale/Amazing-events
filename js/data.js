@@ -192,7 +192,7 @@ let data = {
   };
 
 
-  // Extra, Fuera de la Task
+  // Extra, NO es parte de la Task
   function detailCard(id) {
     let idElemento = (id - 1).toString();
     localStorage.setItem('idDetailClick',idElemento);
