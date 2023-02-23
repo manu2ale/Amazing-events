@@ -173,8 +173,7 @@ let data = {
   };
 
   function createCard(event) {
-    let card = "";
-      card = `
+    let card =  `
       <div class="card d-flex text-center border-danger" style="width: 18rem;">
       <div class="img">
         <img src="${event.image}" class="card-img-top" alt="...">
@@ -190,8 +189,10 @@ let data = {
       </div>
       `
     return card;
-  }
+  };
 
+
+  // Extra, Fuera de la Task
   function detailCard(id) {
     let idElemento = (id - 1).toString();
     localStorage.setItem('idDetailClick',idElemento);

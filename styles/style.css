@@ -11,6 +11,10 @@ main {
     height: 84px;
 }
 
+.navegador h1 {
+    text-align: center;
+}
+
 .carousel-control-next-icon, .carousel-control-prev-icon {
     filter: invert(100%);
 }
