@@ -57,39 +57,20 @@
     
     <main>
         <div class="d-flex justify-content-center align-items-center pt-5">
-            <form class="formulario" >
+            <form class="formulario d-flex flex-column">
                 <div class="mb-3">
                     <label for="name" class="form-label">Name:</label>
-                    <input type="text" class="form-control  border border-dark-subtle" id="name">
+                    <input type="text" class="form-control  shadow-none border border-dark-subtle" id="name">
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email:</label>
-                    <input type="email" class="form-control border border-dark-subtle" id="email">
+                    <input type="email" class="form-control shadow-none border border-dark-subtle" id="email">
                 </div>
                 <div class="mb-3">
-                    <label for="Message" class="form-label">Message</label>
-                    <textarea class="form-control border border-dark-subtle" id="Message" rows="3"></textarea>
+                    <label for="Message" class="form-label">Message:</label>
+                    <textarea class="form-control border shadow-none border-dark-subtle" id="Message" rows="3"></textarea>
                 </div>
-                <div class="mb-3  d-flex justify-content-end">
-                    <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Submit</button>
-
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <img src="./assets/giphy.webp" alt="Magic Word">
-                            </div>
-                            <div class="modal-body">
-                              Formulario de prueba...
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Please</button>
-                              <button type="button" class="btn btn-primary">Understood</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
+                <button type="button" class="btn btn-info align-self-end px-5">Submit</button>
             </form>
         </div>
     </main>

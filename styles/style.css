@@ -28,6 +28,12 @@ main {
     background-color: #0dcaf0;
 }
 
+/* Filtros checkbox */
+input[type="checkbox"]:checked{
+  background-color: #0dcaf0;
+  color: #fff;
+}
+
 /* Cards */
 .img {
     overflow: hidden;
@@ -78,6 +84,10 @@ main {
 
 /* FOOTER */
 
+footer {
+    border-radius: 10% 10% 0 0 ;
+}
+
 .instagram {
     color: transparent;
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
@@ -104,7 +114,6 @@ main {
     height: 40px;
     vertical-align: middle;
     border-radius: 50%;
-    /* background-color: white; */
     line-height: 37px;
     text-align: center;
     font-size: 32px;

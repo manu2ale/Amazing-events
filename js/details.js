@@ -28,5 +28,4 @@ if (eventDate < currentDate) {
     assisEstimate.innerHTML = `<span> Assistance: </span>${evento.assistance}`
 } else {
     assisEstimate.innerHTML = `<span>Estimate: </span>${evento.estimate}`
-
 }

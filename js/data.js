@@ -170,10 +170,10 @@ let data = {
         "price":250
       }
     ]
-  };
+};
 
-  function createCard(event) {
-    let card =  `
+function createCard(event) {
+  let card =  `
       <div class="card d-flex text-center border-danger" style="width: 18rem;">
       <div class="img">
         <img src="${event.image}" class="card-img-top" alt="...">
@@ -188,12 +188,38 @@ let data = {
             </div>
       </div>
       `
-    return card;
-  };
+  return card;
+};
 
 
-  // Extra, NO es parte de la Task
-  function detailCard(id) {
+ 
+function detailCard(id) {
     let idElemento = (id - 1).toString();
     localStorage.setItem('idDetailClick',idElemento);
+};
+
+
+let categories = [];
+data.events.forEach(evento => {
+  if (!categories.includes(evento.category)) {
+    categories.push(evento.category)
+  }
+});
+
+function createCheckbox(category) {
+  let check = `<div class="form-check form-check-inline">
+      <input class="form-check-input checkbox-info shadow-none border border-dark-subtle" type="checkbox" name="Category" value="${category}" id="${category}">
+      <label class="form-check-label" for="${category}">${category}</label>
+    </div>`;
+return check;
+};
+
+function nothingFound(word) {
+  document.getElementById('card-container').innerHTML = `
+  <div class="text-center">
+  <p class="pb-3"><i class="bi bi-search fs-1"></i></p>
+  <h3>We couldn't find anything for '${word}'</h3>
+  <p>You may want to try using different keywords, deselecting filters, or checking for spelling mistakes.</p>
+  </div>
+  `
 };
