@@ -27,19 +27,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav text-nowrap user-select-none fw-semibold flex-nowrap nav-fill">
                 <li class="nav-item">
-                    <a class="nav-link mx-3 link-info" aria-current="page" href="./index.html">HOME</a>
+                    <a class="nav-link mx-2 link-info" aria-current="page" href="./index.html">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-3 link-info" href="./upcoming-events.html">UPCOMING EVENTS</a>
+                    <a class="nav-link mx-2 link-info" href="./upcoming-events.html">UPCOMING EVENTS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-3 link-light active" href="./past-events.html">PAST EVENTS</a>
+                    <a class="nav-link mx-2 link-light active" href="./past-events.html">PAST EVENTS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-3 link-info" href="./contact.html">CONTACT</a>
+                    <a class="nav-link mx-2 link-info" href="./contact.html">CONTACT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-3 link-info" href="./stats.html">STATS</a>
+                    <a class="nav-link mx-2 link-info" href="./stats.html">STATS</a>
                 </li>
             </ul>
         </div>
@@ -56,41 +56,22 @@
     </div>
     
     <main>
-        <form class="my-3 pb-3 border-bottom border-danger-subtle container d-flex justify-content-around align-items-center flex-wrap">
-            <div class="d-flex flex-wrap justify-content-center">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input border border-primary" type="checkbox" name="Category" value="Category1" id="flexCheckChecked"
-                        checked>
-                    <label class="form-check-label" for="flexCheckChecked">Category 1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input border border-primary" type="checkbox" name="Category" value="Category2" id="Category2">
-                    <label class="form-check-label" for="Category2">Category 2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input border border-primary" type="checkbox" name="Category" value="Category1" id="Category3">
-                    <label class="form-check-label" for="Category3">Category 3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input border border-primary" type="checkbox" name="Category" value="Category4" id="Category4">
-                    <label class="form-check-label" for="Category4">Category 4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input border border-primary" type="checkbox" name="Category5" value="Category5" id="Category5">
-                    <label class="form-check-label" for="Category5">Category 5</label>
-                </div>
+        <div class="py-3 pb-3 border-bottom border-danger-subtle container d-flex justify-content-around align-items-center flex-wrap">
+            <div class="d-flex flex-wrap justify-content-center contCheck">
+                <!-- dynamicContent -->
             </div>
-            <div class="d-flex">
-                <input type="text" name="search" class="form-control border border-dark-subtle" placeholder="Search">
-                <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
-            </div>
-        </form>
-
-
-        <div class="d-flex gap-5 my-5 mx-5 flex-wrap justify-content-evenly" id="card-container">
-           
+            <form class="searchForm">
+                <div class="d-flex">
+                    <input type="text" name="search" class="searchInput rounded-start-pill shadow-none rounded-0 form-control border border-dark-subtle" placeholder="Search">
+                    <button type="submit" class="searchSubmit rounded-0 rounded-end-circle btn btn-info"><i class="bi bi-search text-white"></i></button>
+                </div>
+            </form>
         </div>
-
+    
+    
+        <div class="d-flex gap-5 py-5 px-5 flex-wrap justify-content-evenly" id="card-container">
+            <!-- dynamicContent -->
+        </div>
     </main>
 
 

@@ -184,7 +184,7 @@ function createCard(event) {
             </div>
             <div class="d-flex justify-content-center align-items-center align-self-bottom mb-3">
               <span>Price: $ ${event.price}</span>
-              <a href="./details.html" class="btn ms-3" id=${event._id} onClick="detailCard(this.id)">More</a>
+              <a href="./details.html?id=${event._id}" class="btn ms-3">More</a>
             </div>
       </div>
       `
@@ -192,13 +192,7 @@ function createCard(event) {
 };
 
 
- 
-function detailCard(id) {
-    let idElemento = (id - 1).toString();
-    localStorage.setItem('idDetailClick',idElemento);
-};
-
-
+// Crear Categorias únicas
 let categories = [];
 data.events.forEach(evento => {
   if (!categories.includes(evento.category)) {
@@ -206,6 +200,8 @@ data.events.forEach(evento => {
   }
 });
 
+
+// Crear HTML de un checkBox con categoria
 function createCheckbox(category) {
   let check = `<div class="form-check form-check-inline">
       <input class="form-check-input checkbox-info shadow-none border border-dark-subtle" type="checkbox" name="Category" value="${category}" id="${category}">
@@ -214,6 +210,20 @@ function createCheckbox(category) {
 return check;
 };
 
+
+// Crear e insertar checkbox de categorias
+function insertCheckbox() {
+let listCategories = "";
+const checkContainer = document.querySelector(".contCheck");
+categories.forEach(category => {
+    listCategories += createCheckbox(category);
+}
+);
+checkContainer.innerHTML = listCategories;
+};
+
+
+// Crear mensaje de error de búsqueda
 function nothingFound(word) {
   document.getElementById('card-container').innerHTML = `
   <div class="text-center">

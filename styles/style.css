@@ -6,6 +6,11 @@ main {
     min-height: 70vh;
 }
 
+/* nav */
+.nav-link:hover {
+    border-bottom: 1px solid #fff;
+}
+
 /* Navegador */
 .navegador {
     height: 84px;
