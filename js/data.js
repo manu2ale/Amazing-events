@@ -192,34 +192,22 @@ function createCard(event) {
 };
 
 
-// Crear Categorias únicas
-let categories = [];
-data.events.forEach(evento => {
-  if (!categories.includes(evento.category)) {
-    categories.push(evento.category)
-  }
-});
-
-
-// Crear HTML de un checkBox con categoria
-function createCheckbox(category) {
-  let check = `<div class="form-check form-check-inline">
-      <input class="form-check-input checkbox-info shadow-none border border-dark-subtle" type="checkbox" name="Category" value="${category}" id="${category}">
-      <label class="form-check-label" for="${category}">${category}</label>
-    </div>`;
-return check;
-};
-
-
 // Crear e insertar checkbox de categorias
 function insertCheckbox() {
-let listCategories = "";
-const checkContainer = document.querySelector(".contCheck");
-categories.forEach(category => {
-    listCategories += createCheckbox(category);
-}
-);
+  let listCategories = "";
+  const checkContainer = document.querySelector(".contCheck");
+  let categories = [];
+
+  data.events.forEach(evento => {
+    if (!categories.includes(evento.category)) {
+      categories.push(evento.category);
+      listCategories += `<div class="form-check form-check-inline">
+      <input class="form-check-input checkbox-info shadow-none border border-dark-subtle" type="checkbox" name="Category" value="${evento.category}" id="${evento.category}">
+      <label class="form-check-label" for="${evento.category}">${evento.category}</label>
+      </div>`;
+    }
 checkContainer.innerHTML = listCategories;
+});
 };
 
 

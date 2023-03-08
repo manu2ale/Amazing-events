@@ -68,28 +68,23 @@ for (let check of homeChecks) {
 };
 
 
-// Quito la recarga de la pagina por default del Submit al Form
-const searchForm = document.querySelector(".searchForm");
-searchForm.addEventListener('submit', e => {
-    e.preventDefault();
-});
-
 
 // Realizo la busqueda por el searchInput
-const searchClick = document.querySelector(".searchSubmit");
+const searchForm = document.querySelector(".searchForm");
 const searchInput = document.querySelector(".searchInput");
-searchClick.addEventListener('click', () => {
+searchForm.addEventListener('submit', e => {
+    e.preventDefault();
     let htmlEvents = "";
     let result = false;
     let keyWord = searchInput.value.toLowerCase().trim();
-
+    
     let checkeados = [];
     for (let chk of homeChecks) {
         if (chk.checked) {
             checkeados.push(chk.value)
         };
     };
-
+    
     if ((keyWord != "") && (checkeados.length == 0)) {
         pastEvents.forEach(event => {
             if ( (event.name.toLowerCase().includes(keyWord)) || (event.description.toLowerCase().includes(keyWord)) ) {

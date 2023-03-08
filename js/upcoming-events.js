@@ -1,5 +1,6 @@
 const cardContainer = document.getElementById("card-container");
 
+
 // Create upcoming events array
 let upcomingEvents = [];
 let currentDate = new Date(data.currentDate);
@@ -67,28 +68,22 @@ for (let check of homeChecks) {
 };
 
 
-// Quito la recarga de la pagina por default del Submit al Form
+// Realizo la busqueda por el searchInput
 const searchForm = document.querySelector(".searchForm");
+const searchInput = document.querySelector(".searchInput");
 searchForm.addEventListener('submit', e => {
     e.preventDefault();
-});
-
-
-// Realizo la busqueda por el searchInput
-const searchClick = document.querySelector(".searchSubmit");
-const searchInput = document.querySelector(".searchInput");
-searchClick.addEventListener('click', () => {
     let htmlEvents = "";
     let result = false;
     let keyWord = searchInput.value.toLowerCase().trim();
-
+    
     let checkeados = [];
     for (let chk of homeChecks) {
         if (chk.checked) {
             checkeados.push(chk.value)
         };
     };
-
+    
     if ((keyWord != "") && (checkeados.length == 0)) {
         upcomingEvents.forEach(event => {
             if ( (event.name.toLowerCase().includes(keyWord)) || (event.description.toLowerCase().includes(keyWord)) ) {

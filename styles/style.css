@@ -1,5 +1,6 @@
 body {
-    padding-top: 91.2px;
+    padding-top: 88px;
+    background-color: #FAF9F6;
 }
 
 main {
@@ -20,12 +21,8 @@ main {
     text-align: center;
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
-    filter: invert(100%);
-}
-
 .flecha-link {
-    padding: 21.25px 26px;
+    padding: 10px 17px;
     border-radius: 50%;
 }
 
@@ -47,7 +44,7 @@ input[type="checkbox"]:checked{
     width: 100%;
     height: 12rem;
     object-fit:cover;
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .card:hover img {
@@ -122,10 +119,12 @@ footer {
     line-height: 37px;
     text-align: center;
     font-size: 32px;
+    transition: rotate 0.3s ease-in-out;
 }
 
 .social-icon:hover {
     cursor: pointer;
+    rotate: 360deg;
 }
 
 

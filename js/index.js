@@ -52,29 +52,23 @@ for (let check of homeChecks) {
 };
 
 
-// Quito la recarga de la pagina por default del Submit al Form
+// Busqueda por texto Ingresado
 const searchForm = document.querySelector(".searchForm");
+const searchInput = document.querySelector(".searchInput");
 searchForm.addEventListener('submit', e => {
     e.preventDefault();
-});
-
-
-// Realizo la busqueda por el searchInput
-const searchClick = document.querySelector(".searchSubmit");
-const searchInput = document.querySelector(".searchInput");
-searchClick.addEventListener('click', () => {
     let htmlEvents = "";
     let result = false;
     let keyWord = searchInput.value.toLowerCase().trim();
-
-    let checkeados = [];
+    //Guardo checkboxes para enviar como Argumento en bothFiltersSearch
+    let checkedCategories = [];
     for (let chk of homeChecks) {
         if (chk.checked) {
-            checkeados.push(chk.value)
+            checkedCategories.push(chk.value)
         };
     };
-
-    if ((keyWord != "") && (checkeados.length == 0)) {
+    
+    if ((keyWord != "") && (checkedCategories.length == 0)) {
         data.events.forEach(event => {
             if ( (event.name.toLowerCase().includes(keyWord)) || (event.description.toLowerCase().includes(keyWord)) ) {
                 htmlEvents += createCard(event);
@@ -86,9 +80,9 @@ searchClick.addEventListener('click', () => {
         } else {
             nothingFound(keyWord);
         };
-    } else if ((keyWord != "") && (checkeados.length > 0)){
-        bothFiltersSearch(checkeados, keyWord, htmlEvents);
+    } else if ((keyWord != "") && (checkedCategories.length > 0)){
+        bothFiltersSearch(checkedCategories, keyWord, htmlEvents);
     } else {
-            createHomeCards();
+        createHomeCards();
     };
 });
