@@ -6,14 +6,16 @@ const evento = data.events.find(event => event._id == id);
 
 
 let cardDetailPage = document.getElementById("detailCard");
+
 let htmlDetail = 
     `
-    <img class="img-detail p-2 border border-danger rounded-start" src="${evento.image}" alt="Detail image">
-    <div class="card text-center px-3 border border-danger" style="width: 28rem; height:28rem">
-        <div class="card-body">
-            <h2 class="card-title">${evento.name}</h2>
-            <p class="card-text fs-5">${evento.description}</p>
-            <div class="card-footer mt-4 text-start">
+    <img class="img-detail" src="${evento.image}" alt="Detail image">
+
+    <div class="card card-detail rounded-0 text-center")">
+        <div class="card-body card-detail-body">
+            <h2 class="card-title fs-1">${evento.name}</h2>
+            <p class="card-text fs-4">${evento.description}</p>
+            <div class="detail-data mt-4 fs-5">
                 <p><span>Category: </span>${evento.category}</p>
                 <p><span>Date: </span>${evento.date}</p>
                 <p><span>Place: </span>${evento.place}</p>

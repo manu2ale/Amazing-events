@@ -1,20 +1,29 @@
-body {
-    padding-top: 88px;
-    background-color: #FAF9F6;
+:root {
+    --off-white-color: #FAF9F6;
 }
 
-main {
-    min-height: 70vh;
+
+
+body {
+    padding-top: 72px;
+    background-color: var(--off-white-color);
+    min-height: 100vh;
 }
+
 
 /* nav */
 .nav-link:hover {
     border-bottom: 1px solid #fff;
 }
 
+.navbar-brand:hover {
+    filter:brightness(1.2);
+}
+
+
 /* Navegador */
 .navegador {
-    height: 84px;
+    height: 72px;
 }
 
 .navegador h1 {
@@ -22,7 +31,7 @@ main {
 }
 
 .flecha-link {
-    padding: 10px 17px;
+    padding: 5px 13px;
     border-radius: 50%;
 }
 
@@ -30,11 +39,13 @@ main {
     background-color: #0dcaf0;
 }
 
+
 /* Filtros checkbox */
 input[type="checkbox"]:checked{
   background-color: #0dcaf0;
   color: #fff;
 }
+
 
 /* Cards */
 .img {
@@ -48,7 +59,7 @@ input[type="checkbox"]:checked{
 }
 
 .card:hover img {
-    transform: scale(1.04);
+    transform: scale(1.03);
 }
 
 
@@ -61,17 +72,26 @@ input[type="checkbox"]:checked{
     border-color: #dd0269;
 }
 
+
 /* Details */
 .img-detail {
-    width: 600px;
-    height:auto;
-    object-fit: cover;
+    max-width: 40rem;
     overflow: hidden;
 }
 
-.card-footer span{
+.card-detail {
+    color: var(--off-white-color);
+    background-color:rgb(218, 2, 104);
+}
+
+.card-detail-body {
+    max-width: 40rem;
+}
+
+.detail-data span{
     font-weight: bold;
 }
+
 
 /* CONTACT */
 .formulario {
@@ -84,10 +104,12 @@ input[type="checkbox"]:checked{
     flex-basis: 1024px;
 }
 
-/* FOOTER */
 
+/* FOOTER */
 footer {
     border-radius: 10% 10% 0 0 ;
+    position: sticky;
+    top: 100%;
 }
 
 .instagram {
@@ -95,7 +117,6 @@ footer {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     background-clip: text;
     -webkit-background-clip: text;
-    
 }
 
 .sombra {
@@ -119,12 +140,10 @@ footer {
     line-height: 37px;
     text-align: center;
     font-size: 32px;
-    transition: rotate 0.3s ease-in-out;
+    transition: filter 0.3s ease-in-out;
 }
 
 .social-icon:hover {
     cursor: pointer;
-    rotate: 360deg;
+    filter: brightness(1.4);
 }
-
-
