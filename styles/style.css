@@ -75,11 +75,12 @@ input[type="checkbox"]:checked{
 
 /* Details */
 .img-detail {
-    max-width: 40rem;
+    width: 40rem;
     overflow: hidden;
 }
 
 .card-detail {
+    width: 40rem;
     color: var(--off-white-color);
     background-color:rgb(218, 2, 104);
 }
