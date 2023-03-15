@@ -8,7 +8,7 @@ async function dataApi() {
   } catch (error) {
     console.error('Cant get data: ' + error);
   }
-}
+};
 
 dataApi();
 let data = JSON.parse(localStorage.getItem('dataLocal'));
