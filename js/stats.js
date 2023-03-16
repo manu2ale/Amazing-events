@@ -45,9 +45,9 @@ let largerCapacity = data.events.find(event => event.capacity == maxCapacity);
 let eventsStatsHTML = 
     `
         <tr>
-            <td>${highestAttendance.name}</td>
-            <td>${lowestAttendance.name}</td>
-            <td>${largerCapacity.name}</td>
+            <td class="text-center" >${highestAttendance.name}</td>
+            <td class="text-center" >${lowestAttendance.name}</td>
+            <td class="text-center" >${largerCapacity.name}</td>
         </tr>
     `;
 
@@ -56,7 +56,7 @@ const eventsStats = document.getElementById('eventsStatistics');
 eventsStats.insertAdjacentHTML('afterend', eventsStatsHTML);
 
 
-// Upcoming events statistics by category
+// Upcoming and Past events statistics by category
 let upcomingStatsHTML = '';
 let pastStatsHTML = '';
 for (let categ of arrayCategories) {
@@ -71,12 +71,14 @@ for (let categ of arrayCategories) {
             accAttend += ((event.estimate*100)/event.capacity);
             contAttend++;
     });
+
     isNaN(Math.round(accAttend/contAttend)) ? 0 : percentAttend=Math.round(accAttend/contAttend);
+
     upcomingStatsHTML += 
     `<tr>
-        <td>${categ}</td>
-        <td>${revenues}</td>
-        <td>${percentAttend}</td>
+        <td class="text-center" >${categ}</td>
+        <td class="text-center" >$ ${revenues}</td>
+        <td class="text-center" >${percentAttend} %</td>
      </tr>`;
      
 
@@ -89,12 +91,13 @@ for (let categ of arrayCategories) {
              accAttend += ((event.assistance*100)/event.capacity);
              contAttend++;
      });
+     
      isNaN(Math.round(accAttend/contAttend)) ? 0 : percentAttend=Math.round(accAttend/contAttend);
      pastStatsHTML += 
      `<tr>
-         <td>${categ}</td>
-         <td>${revenues}</td>
-         <td>${percentAttend}</td>
+         <td class="text-center" >${categ}</td>
+         <td class="text-center" >$ ${revenues}</td>
+         <td class="text-center" >${percentAttend} %</td>
       </tr>`;
 };
 

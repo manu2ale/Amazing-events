@@ -46,6 +46,9 @@ input[type="checkbox"]:checked{
   color: #fff;
 }
 
+.searchInput::placeholder{
+    font-style: italic;
+}
 
 /* Cards */
 .img {
