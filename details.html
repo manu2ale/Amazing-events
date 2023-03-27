@@ -46,9 +46,28 @@
     </nav>
 
     <main>
-        <div class="d-flex flex-wrap justify-content-center py-4" id="detailCard">
-            <!-- Generated content -->
+    <div id="app">
+        {{getDetailEvent()}}
+        <div  class="d-flex flex-wrap justify-content-center py-4" id="detailCard">
+            <img class="img-detail" :src="detailEvent.image" alt="Detail image">
+            <div class="card card-detail rounded-0 text-center">
+                <div class="card-body card-detail-body">
+                    <h2 class="card-title fs-1">{{detailEvent.name}}</h2>
+                    <p class="card-text fs-4">{{detailEvent.description}}</p>
+                    <div class="detail-data mt-4 fs-5">
+                        <p><span>Category: </span>{{detailEvent.category}}</p>
+                        <p><span>Date: </span>{{detailEvent.date}}</p>
+                        <p><span>Place: </span>{{detailEvent.place}}</p>
+                        <p><span>Capacity: </span>{{detailEvent.capacity}}</p>
+                        <p id="assistEstimate"></p>
+                        <p><span>Price: </span>$ {{detailEvent.price}}</p>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
+    </div>
     </main>
 
 
@@ -70,8 +89,10 @@
     </footer>
 
 
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/data.js"></script>
-    <script src="./js/details.js"></script>
+    <!-- <script src="./js/details.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>

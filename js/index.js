@@ -1,19 +1,19 @@
-const cardContainer = document.getElementById("card-container");
+// const cardContainer = document.getElementById("card-container");
 
 
-// Crea las cards Dinamicas
-function createHomeCards () {
-    let htmlEvents = "";
-    for (let event of data.events) {
-        htmlEvents += createCard(event);
-    };
-    cardContainer.innerHTML = htmlEvents;
-};
-createHomeCards();
+// // Crea las cards Dinamicas
+// function createHomeCards () {
+//     let htmlEvents = "";
+//     for (let event of data.events) {
+//         htmlEvents += createCard(event);
+//     };
+//     cardContainer.innerHTML = htmlEvents;
+// };
+// createHomeCards();
 
 
-// Crear e insertar checkbox de categorias
-insertCheckbox();
+// // Crear e insertar checkbox de categorias
+// insertCheckbox();
 
 
 // Busqueda con ambos filtros
@@ -29,12 +29,12 @@ function bothFiltersSearch(checkeados, keyWord, htmlEvents) {
 const homeChecks = document.querySelectorAll(".form-check-input");
 for (let check of homeChecks) {
     check.addEventListener('change', () => {
-        let checkeados = [];
-        for (let chk of homeChecks) {
-            if (chk.checked) {
-                checkeados.push(chk.value)
-            };
-        };
+        // let checkeados = [];
+        // for (let chk of homeChecks) {
+        //     if (chk.checked) {
+        //         checkeados.push(chk.value)
+        //     };
+        // };
 
         let keyWord = searchInput.value.toLowerCase().trim();
         let htmlEvents = "";

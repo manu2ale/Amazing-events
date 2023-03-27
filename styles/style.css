@@ -3,12 +3,12 @@
 }
 
 
-
 body {
     padding-top: 72px;
     background-color: var(--off-white-color);
     min-height: 100vh;
 }
+
 
 
 /* nav */
@@ -150,4 +150,8 @@ footer {
 .social-icon:hover {
     cursor: pointer;
     filter: brightness(1.4);
+}
+
+[v-cloak] {
+    display: none;
 }

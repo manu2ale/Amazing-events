@@ -4,8 +4,12 @@ createApp ({
   data() {
     return {
       urlAPI : ('https://mindhub-xj03.onrender.com/api/amazing'),
-      data: [],
-      categories : []
+      data : [],
+      dataAux : [],
+      categories : [],
+      wordInput : "",
+      checkedCategories : [],
+      detailEvent: ""
     }
   },
 
@@ -23,18 +27,19 @@ createApp ({
         let response = await fetch(this.urlAPI);
         let result = await response.json();
         this.data = result;
-        this.insertCheckbox(this.data.events);
+        this.dataAux = this.data;
+        this.createCategories(this.data.events);
       } catch (error) {
         console.error('Cant get data: ' + error);
       }
     },
     
-    // Crear e insertar checkbox de categorias
-    insertCheckbox(array) {
+    // Crear categorias
+    createCategories(array) {
       array.forEach(evento => {
         if (!this.categories.includes(evento.category)) {
           this.categories.push(evento.category);
-        }
+        };
       });
     },
 
@@ -53,16 +58,24 @@ createApp ({
                 </div>
           `
     },
+
     // Crear mensaje de error de búsqueda
-    nothingFound(word) {
-      document.getElementById('card-container').innerHTML = `
+    nothingFound() {
+      return `
       <div class="text-center">
       <p class="pb-3"><i class="bi bi-search fs-1"></i></p>
-      <h3>We couldn't find anything for '${word}'</h3>
+      <h3>We couldn't find anything for '${this.wordInput}'</h3>
       <p>You may want to try using different keywords, deselecting filters, or checking for spelling mistakes.</p>
       </div>
       `
     },
+
+    getDetailEvent() {
+      const queryString = location.search;
+      const params = new URLSearchParams(queryString);
+      const id = params.get("id");
+      this.detailEvent = this.data.events.find(event => event._id == id);
+    }
     
   },
 
