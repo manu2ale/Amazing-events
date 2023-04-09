@@ -9,7 +9,7 @@ createApp ({
       categories : [],
       wordInput : "",
       checkedCategories : [],
-      detailEvent: ""
+      detailEvent: {}
     }
   },
 
@@ -71,12 +71,15 @@ createApp ({
     },
 
     getDetailEvent() {
-      const queryString = location.search;
-      const params = new URLSearchParams(queryString);
-      const id = params.get("id");
-      this.detailEvent = this.data.events.find(event => event._id == id);
+      let queryString = location.search;
+      let params = new URLSearchParams(queryString);
+      let id = params.get("id");
+      try {
+        this.detailEvent = this.data.events.find(event => event._id == id);
+      } catch (error) {
+        console.error('Pasó esto: ' + error)
+      }
     }
-    
   },
 
   computed: {

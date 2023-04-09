@@ -14,7 +14,7 @@
 </head>
 
 <body>
-
+    <div id="app" v-cloak>
     <nav class="navbar navbar-expand-lg bg-dark bg-gradient px-5 py-3 fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html" title="Amazing Events">
@@ -57,7 +57,7 @@
     </div>
     
     <main>
-    <div id="app" v-cloak>
+    
         <div class="py-3 pb-3 border-bottom border-danger-subtle container d-flex justify-content-around align-items-center flex-wrap">
             <div class="d-flex flex-wrap justify-content-between contCheck user-select-none">
                 <div v-for="category of categories" class="form-check form-check-inline">
@@ -77,7 +77,7 @@
             </div>
             <!-- <template v-if="dataAux.events.length == 0">{{nothingFound()}}</template> -->
         </div>
-    </div>
+    
     </main>
 
 
@@ -99,6 +99,8 @@
         <h1>Cohort</h1>
     </div>
 </footer>
+
+</div>
 
 
 

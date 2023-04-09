@@ -46,7 +46,7 @@
     </nav>
 
     <main>
-    <div id="app">
+    <div id="app" v-cloak>
         {{getDetailEvent()}}
         <div  class="d-flex flex-wrap justify-content-center py-4" id="detailCard">
             <img class="img-detail" :src="detailEvent.image" alt="Detail image">
